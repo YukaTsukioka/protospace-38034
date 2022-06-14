@@ -16,7 +16,7 @@ def create
    if @prototype.save
     redirect_to root_path
   else
-    prototype :new
+    render :new
   end
 end
 
@@ -36,7 +36,7 @@ def update
   if @prototype.update(prototype_params)
     redirect_to prototype_path
   else
-    render :edit
+    render :update
   end
 end
 
